@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Arte API</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="portada">
+        <nav class="nav">
+            <a href="/pintores">Pintores</a>
+            <a href="/cuadros">Cuadros</a>
+            <a href="/api/usuarios/registro">Registro</a>
+        </nav>
+
+        <div class="titulo">
+            <p>Parcial 1</p>
+            <h1>Galeria API</h1>
+            <span>Cuadros, pintores y consultas sobre una coleccion de arte moderno.</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="bloque">
+            <div class="bloque__encabezado">
+                <p>Entradas principales</p>
+                <h2>Consultar colecciones</h2>
+            </div>
+
+            <div class="acciones">
+                <a href="/pintores">
+                    <span>Ver pintores</span>
+                    <code>GET /pintores</code>
+                </a>
+                <a href="/cuadros">
+                    <span>Ver cuadros</span>
+                    <code>GET /cuadros</code>
+                </a>
+                <a href="/api/usuarios">
+                    <span>Ver usuarios</span>
+                    <code>GET /api/usuarios</code>
+                </a>
+            </div>
+        </section>
+
+        <section class="bloque grilla">
+            <article>
+                <h2>Buscar</h2>
+                <a href="/pintores?nombre=frida">Pintor por nombre</a>
+                <a href="/cuadros?titulo=guernica">Cuadro por titulo</a>
+            </article>
+
+            <article>
+                <h2>Filtrar</h2>
+                <a href="/pintores?nacionalidad=Mexicana">Pintores por nacionalidad</a>
+                <a href="/pintores?activo=true">Pintores activos</a>
+                <a href="/cuadros?estilo=Surrealismo">Cuadros por estilo</a>
+            </article>
+
+            <article>
+                <h2>Autenticarse</h2>
+                <a href="/api/usuarios/registro">Crear usuario</a>
+                <p>Para cargar, editar o borrar se usa token JWT por header Authorization.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p><strong>Santiago Pucacco</strong></p>
+        <p>Aplicaciones Hibridas</p>
+        <p>Docente: Cruz, Jonathan Emanuel</p>
+        <p>Comision B</p>
+    </footer>
+</body>
+</html>
